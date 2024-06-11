@@ -1,4 +1,3 @@
-cat Dockerfile
 FROM alpine:latest
 RUN apk add --no-cache bash
 # Install dependencies and build tools
