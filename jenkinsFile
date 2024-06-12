@@ -10,8 +10,8 @@ pipeline {
         stage('docker-actions') {
             steps {
                 withDockerRegistry(credentialsId: 'docker-cred', url: 'https://index.docker.io/v1/') {
-                    sh "docker build -t outlookdock/wisecow:v1 ."
-                    sh "docker push outlookdock/wisecow:v1"
+                    sh "docker build -t outlookdock/wisecow:latest ."
+                    sh "docker push outlookdock/wisecow:latest"
                 }
             }
         }
