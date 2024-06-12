@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: wisecow
-        image: outlookdock/wisecow:v1 # Replace with your Docker Hub username and tag
+        image: outlookdock/wisecow:latest # Replace with your Docker Hub username and tag
         ports:
         - containerPort: 4499
 ---
