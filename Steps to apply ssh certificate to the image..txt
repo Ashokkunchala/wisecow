@@ -1,0 +1,24 @@
+testing....
+minikube start --driver=docker
+   58  minikube status
+   59  minikube addons list
+   60  minikube addons enable dashboard
+   61  minikube addons enable ingress
+   62  minikube dashboard
+   63  docker login
+   64  kubectl run wisecow --image=outlookdock/wisecow:latest
+   65  kubectl expose pod wisecow --port 4499
+   66  kubectl apply -f ingress.yaml
+   67  kubectl delete ingress.networking.k8s.io nginx
+   68  kubectl apply -f ingress.yaml
+   69  echo "$(minikube ip) example.com" | sudo tee -a /etc/hosts
+   70  cat /etc/hosts | tail -n 1
+   71  curl example.com
+   72  curl -k https//:example.com
+   73  openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout tls.key -out tls.crt -subj "/CN=example.com" -days 365
+   74  kubectl create secret tls example-com-tls --cert=tls.crt --key=tls.key
+   75  kubectl get secret example-com-tls
+   76  kubectl get secret -o yaml
+   77  kubectl apply -f ingress.yaml
+   78  curl -k https://example.com
+   79  curl --cacert tls.crt https://example.com
